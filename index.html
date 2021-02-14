@@ -9,16 +9,106 @@
 <link href="https://fonts.googleapis.com/css?family=Dhurjati" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Playball" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Jomhuria" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet" type="text/css">
 <style>
 
 * {
 	box-sizing: border-box;
-	background-size: auto;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+#image {
+	max-width: 900px;
+	width: 500px;
+	height: 500px;
+	margin: 0 auto;
+	background-color: #ffffff;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.container {
+	max-width: 900px;
+	width: 100%;
+	margin: 0 auto;
+	background-color: #ffffff;
+	padding: 30px;
 }
 
 #main {
 	background-image: url(images/hero.jpg) !important;
-	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: 100%;  
 	background-position: center;   
@@ -49,6 +139,11 @@ h3 {
 	font-family: Gruppo;
 	font-weight: bold;
 }
+
+h1 {
+	text-align: center;
+}
+
 #info {
 	font-family: monospace;
 	font-size: 20px;
@@ -57,18 +152,6 @@ h3 {
 
 #img-div {
 	display: block; 
-}
-
-#image {
-	border:solid;
-	border-radius: 50%;
-  	display: block;
- 	margin-left: auto;
-  	margin-right: auto;
-  	margin-top: 100px;
-  	width: 50%;
-}
-
 }
 
 #img-caption {
@@ -84,14 +167,21 @@ h3 {
 }
 
 #tribute-info {
-	text-align: center;
+	text-align: left;
 	font-size: 30px;
-	font-family: Dhurjati;
+	font-family: Jomhuria;
+}
+
+#subheader {
+	font-family: Cabin;
 }
 
 .card {
 	padding: 30px;
-	background-color: #ffffff;
+	background-image: url(images/f.jpg);
+	background-attachment: fixed;
+	background-size: 100%;
+	border-radius: 20;
 }
 
 .footer {
@@ -110,100 +200,188 @@ blockquote {
 p {
 	text-align: center;
 	font-size: 40px;
-	font-family: Playball;
+	font-family: Gruppo;
 	font-weight: bold;
 }
 
 body {
 	background-blend-mode: darken;
-	background-image: url(images/finalbg.jpg);
+	background-image: url(images/body.jpg);
 	background-size: 100%;
 	background-attachment: fixed;
 	
 }
 
+li {
+	list-style: none;
+}
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
   * {
     width: 100%;
   }
+  h1, #title, #center {
+  	font-size: 50px;
+  }
+  #main {
+  	max-width: 300px;
+  	width: 100%;
+  	background-attachment: fixed;
+  }
+}
 
 </style>
-</head>
+</head>  
 <body>
-	<div id="main">
-		<header>
+		<header id="main">
 			<div id="title">
 			<h1> Fortunato Ubongen Abat </h1>
 		<hr>	
 		</hr>
 			<h3 id="center"> The Great Warrior </h3>
-		</header>
-	</div>     
+		</header>     
 	<hr>
     </hr>
+    <div class="container">
     	<div id="img-div">
-			<img id="image" src="images/bg.jpg" width= "700px" height="700px">
+			<div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 7</div>
+    <img id="image" src="images/1.jpg" style="width:100%">  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 7</div>
+    <img id="image" src="images/3.jpg" style="width:100%">
+  </div>
+
+    <div class="mySlides fade">
+    <div class="numbertext">3 / 7</div>
+    <img id="image" src="images/4.jpg" style="width:100%">
+  </div>
+
+    <div class="mySlides fade">
+    <div class="numbertext">4 / 7</div>
+    <img id="image" src="images/5.jpg" style="width:100%">
+  </div>
+
+    <div class="mySlides fade">
+    <div class="numbertext">5 / 7</div>
+    <img id="image" src="images/6.jpg" style="width:100%">
+  </div>
+
+    <div class="mySlides fade">
+    <div class="numbertext">6 / 7</div>
+    <img id="image" src="images/8.jpg" style="width:100%">
+  </div>
+
+    <div class="mySlides fade">
+    <div class="numbertext">7 / 7</div>
+    <img id="image" src="images/7.jpg" style="width:100%">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>
+  <span class="dot" onclick="currentSlide(8)"></span>
+</div>
+
+<script>
+  var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
 				<p id="img-caption"> June 10, 1925 – March 7, 2018 </p>
 				<br>
 				<h3><strong> Fortunato U. Abat, a Filipino major general who served as the 20th Secretary of the Department of National Defense (DND), Ambassador to the People's Republic of China, and Commanding General of the Philippine Army. </strong></h3>
 		</div>
-		<hr>
-		</hr>
+	</div>
 		<br>
 		<br>
 		<br>
+		<div class="container">
 		<div id="tribute-info">
+			<h1>Timeline</h1>
+			<hr></hr>
+			<hr></hr>
 			<ul>
-				<li><strong> June 10, 1925 </strong> <br> 
+				<li><strong id="subheader"> June 10, 1925 </strong> <br> 
 					- Born in <a href="https://en.wikipedia.org/wiki/San_Juan,_La_Union"> San Juan, La Union </a> province.</li> <br><br>
-				<li><strong>1932-1939</strong><br> 
+				<li><strong id="subheader">1932-1939</strong><br> 
 					-He studied in <a href="https://www.facebook.com/EpifanioDelosSantosElementarySchoolSingalongMla/"> Singalong Elementary School</a> in the city of Manila.</li><br><br>
-				<li><strong>1939-1941</strong><br> 
+				<li><strong id="subheader">1939-1941</strong><br> 
 					-He studied in <a href="https://www.facebook.com/AraulloHSManila/"> Araullo High School </a> in Metro Manila. His secondary education was abruptly halted by the Japanese invasion during <a href="https://en.wikipedia.org/wiki/World_War_II"> World War II. </a> </li><br><br>
-				<li><strong>April 15, 1944</strong><br> 
+				<li><strong id="subheader">April 15, 1944</strong><br> 
 					-As a young teenager, he entered the <a href="https://en.wikipedia.org/wiki/Philippine_Army">Philippine Army </a> which was incorporated into the United States Armed Forces in the Far East (USAFFE) as an enlisted man. </li><br><br>
-				<li><strong>1947</strong><br> 
+				<li><strong id="subheader">1947</strong><br> 
 					-He continued his secondary education in <a href="https://www.facebook.com/launionnationalhighschooloffficialpage/"> La Union High School </a> even after World War II and completed his education. </li><br><br>
-				<li><strong>1951</strong><br> 
+				<li><strong id="subheader">1951</strong><br> 
 					-Abat entered the <a href="https://en.wikipedia.org/wiki/Philippine_Military_Academy"> Philippine Military Academy </a> right after finishing his high school diploma and graduated in the Class of '51.<br>
 					-He was commissioned as 2nd Lieutenant in the Philippine Army. Along with 2nd Lieutenant Fidel V. Ramos, Abat joined the <a href="https://en.wikipedia.org/wiki/Philippine_Expeditionary_Forces_to_Korea"> Philippine Expeditionary Forces to Korea </a> (PEFTOK), where he served with distinction under the United Nations flag.<br> 
 					-Abat's colorful military career brought him to become the Assistant Chief of Staff for Operations & Training of the <a href="https://en.wikipedia.org/wiki/1st_Infantry_Division_(Philippines)"> 1st Infantry (Tabak) Division</a>. Later on he became the Senior Armed Forces Attache at the Philippine Embassy in Phnom Penh, Cambodia. He also was sent with the Philippine Delegation to the 1st, 2nd, 3rd, 4th, and 5th Meetings of <a href="https://en.wikipedia.org/wiki/SEATO"> SEATO </a> Intelligence Assessment Committee in Bangkok, Thailand.<br>
 					-He also distinguished himself as Commanding Officer of the 3rd Infantry Brigade (Separate), and later on as the Commanding General of the <a href="https://en.wikipedia.org/wiki/3rd_Infantry_Division_(Philippines)"> 3rd Infantry Division </a>, and Central Mindanao Command (CEMCOM).</li><br><br>
-				<li><strong>March 28, 1976 to March 28, 1981</strong><br> 
+				<li><strong id="subheader">March 28, 1976 to March 28, 1981</strong><br> 
 					-Maj. Gen. Abat finally served as <a href="https://en.wikipedia.org/wiki/Commanding_General_of_the_Philippine_Army"> Commanding General of the Philippine Army </a> from March 28, 1976 to March 28, 1981. Tragedy befell the family of Maj. Gen. Abat, when his son, 2Lt. Tito B. Abat, died during an encounter with the <a href="https://en.wikipedia.org/wiki/New_People%27s_Army"> New People's Army </a> in Eastern Samar, a year after graduating from the Philippine Military Academy. </li><br><br>
-				<li><strong>May 1981 - April 1986 </strong><br>
+				<li><strong id="subheader">May 1981 - April 1986 </strong><br>
 					-Immediately after his retirement from active military service, he joined the Ministry of Human Settlements. A few months later, he was named Ambassador to the <a href="https://en.wikipedia.org/wiki/People%E2%80%99s_Republic_of_China"> People’s Republic of China </a> where he served from May 1981 until after <a href="https://en.wikipedia.org/wiki/People_Power_Revolution"> EDSA Revolution </a> on April 1986.</a>.<br>
 					-Upon his return from his Ambassadorship in PROC, Abat was first appointed as the Administrator of the <a href="https://en.wikipedia.org/wiki/Philippine_Veterans_Affairs_Office"> Philippine Veterans Affairs Office </a> (PVAO), a DND agency. Later on, he was named Undersecretary of National Defense (USND) during the term of Defense Secretary Rafael Ileto. He also served as USND during the term of then Defense Secretary Fidel V. Ramos, but he left the Department and was designated Deputy Director General to Secretary Rafael Ileto who later headed the <a href="https://en.wikipedia.org/wiki/National_Security_Council_(Philippines)"> National Security Council </a> (NSC)</li><br><br>
-				<li><strong>1992</strong><br>
+				<li><strong id="subheader">1992</strong><br>
 					-During the presidency of Fidel Ramos, Abat was the Chairman of the Peace Panel of the <a href="https://en.wikipedia.org/wiki/Philippine_Government"> Philippine Government </a> during the negotiations with the <a href="https://en.wikipedia.org/wiki/Moro_National_Liberation_Front"> Moro National Liberation Front </a> (MNLF), which led to signing of a peace treaty on July 18, 1997, ending the three decade old armed hostilities between the Republic of the Philippines and the MILF. He also served as the 20th <a href="https://en.wikipedia.org/wiki/Secretary_of_National_Defense_(Philippines)"> Secretary of the Department of National Defense </a> from September 16, 1997 to June 30, 1998.</li><br><br>
-				<li><strong>2001</strong><br>
+				<li><strong id="subheader">2001</strong><br>
 					-During the height of the Impeachment trial of President Joseph Estrada, Abat along with his colleagues in the Association of General and Flag Officers (AGFO) called for the resignation of the President through a Manifesto. Abat finally was appointed as the President & CEO of the John Hay Poro Point Development Corp. by Pres. Gloria Macapagal Arroyo.</li><br><br>
-				<li><strong>2004</strong><br>
+				<li><strong id="subheader">2004</strong><br>
 					-Despite in retirement, Abat has continued to play a role in <a href="https://en.wikipedia.org/wiki/Politics_of_the_Philippines"> Philippine politics </a>, without escaping controversy. Abat, who formed the National Coalition for Solidarity (NCS) and the Movement for National Salvation (MVS) called on for the resignation of President Gloria Macapagal Arroyo.</li><br><br>
-				<li><strong> December 2005 </strong><br>
+				<li><strong id="subheader"> December 2005 </strong><br>
 					-Abat was arrested after he called on the formation of a revolutionary government, of which he is the new President of the Philippines, and called on the resignation of Pres. Gloria Macapagal Arroyo in view of the latter's allegations of corruption.</li><br><br>
-				<li><strong>August 15, 2006</strong><br>	
+				<li><strong id="subheader">August 15, 2006</strong><br>	
 					-Abat called for the abolishment of the Philippine Government and the <a href="https://en.wikipedia.org/wiki/Philippine_Constitution"> Philippine Constitution </a>, and the creation of a "Transition Government" of "Discipline and Authoritative Governance" where "All the three (3) branches of government are collectively responsible and accountable to the President that has oversight power over the discharge of their functions and responsibilities. Focus of governance. Governance is focused on the civil service and the military and police service."</li><br><br>
-				<li><strong>May 7, 2018</strong><br>
+				<li><strong id="subheader">May 7, 2018</strong><br>
 					-Fortunato U. Abat- a Filipino major general who served as the 20th Secretary of the Department of National Defense (DND), Ambassador to the People's Republic of China, and Commanding General of the Philippine Army, dies at 92. His remains were buried at the Fort Bonifacio " <a href="https://en.wikipedia.org/wiki/Libingan_ng_mga_Bayani"> Libingan ng mga Bayani </a>" (Cemetery of Heroes).</li><br><br>
 			</ul>
 			<br>
-			<img src="images/3.jpg" alt="A photo of Former Mjr. General Abat" width="200" height="200">
-			<img src="images/4.jpg" alt="A photo of Former Mjr. General Abat" width="200" height="200">
-			<img src="images/5.jpg" alt="A photo of Former Mjr. General Abat" width="200" height="200">
-			<img src="images/6.jpg" alt="A photo of Former Mjr. General Abat" width="200" height="200">
-			<img src="images/7.jpg" alt="A photo of Former Mjr. General Abat" width="200" height="200">
-			<img src="images/8.jpg" alt="A photo of Former Mjr. General Abat" width="200" height="200">
-			<img src="images/9.jpg" alt="A photo of Former Mjr. General Abat" width="200" height="200">
-			<img src="images/10.jpg" alt="A photo of Former Mjr. General Abat" width="200" height="200">
+			<img src="images/collage1.jpg" width="830" height="500>
 			<hr>
 			</hr>
+			<div class="container">
 			<p id="info"> If you're fascinated with the life of this Great Hero, you might want to see this link <<a id="tribute-link" href="https://en.wikipedia.org/wiki/Fortunato_Abat" target="_blank">More about Fortunato Abat</a>> to know more about Former Major General Abat.
 			<div class="card">
 			</p>
 			<blockquote>Abat will long be remembered for his bravery in combat in defense of freedom and democracy. It was a display of heroism and sacrifice at the most crucial time the country needed most. May God bless his soul. (PNA). </blockquote>
 		</div>
+	</div>
 
 </body>
 
